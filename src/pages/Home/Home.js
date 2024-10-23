@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAuth, onAuthStateChanged, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, onAuthStateChanged, getRedirectResult } from "firebase/auth";
 import app from '../../Middleware/firebase.js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
