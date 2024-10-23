@@ -5,8 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import useNav from '../Hooks/useNav';
-import { doc, setDoc } from "firebase/firestore"; 
-import { db } from '../../Middleware/firebase';
+
 
 const Register = () => {
     const navigate = useNav();
@@ -41,12 +40,10 @@ const handleSubmit = (e)=>{
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, user.email, user.password)
           .then((userCredential) => {
-            const user = userCredential.user;
             toast.success('User Created Sucessfully');
             navigate('/login',500);
                      })
           .catch((error) => {
-              const errorCode = error.code;
               const errorMessage = error.message;
               toast.error(errorMessage);
           });
