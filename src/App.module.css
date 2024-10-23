@@ -1,0 +1,76 @@
+/* global.css */
+
+/* Root variables */
+:root {
+    --primary-color: #3086e1;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --font-color: #333;
+    --border-radius: 5px;
+    --transition-speed: 0.3s;
+}
+
+/* Global resets and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--font-color);
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--background-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Body styling */
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Anchor tag styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    transition: background-color var(--transition-speed);
+    font-family: inherit;
+}
+
+/* Input and form elements */
+input, textarea, select, button {
+    font-family: inherit;
+    outline: none;
+}
+
+/* Universal container style */
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+}

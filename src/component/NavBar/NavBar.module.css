@@ -1,0 +1,80 @@
+.NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .logo img {
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; 
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .options ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .options li {
+    margin: 0 10px;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .options {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .options ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .options li {
+      margin: 10px 0;
+    }
+  }
+  
