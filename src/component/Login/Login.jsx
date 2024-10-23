@@ -12,7 +12,7 @@ const Login = () => {
     const [user, setUser] = useState({
         email: '', password: ''
     });
-  //  const [googleUser, setGoogleUser] = useState(null);
+ //   const [googleUser, setGoogleUser] = useState(null);
 
     useEffect(() => {
         const auth = getAuth(app);
@@ -22,7 +22,7 @@ const Login = () => {
             .then((result) => {
                 if (result) {
                     const loggedInUser = result.user;
-                    setGoogleUser(loggedInUser);
+               //     setGoogleUser(loggedInUser);
                     toast.success(`Welcome ${loggedInUser.displayName}!`);
                     navigate('/', 500);
                 }
@@ -35,9 +35,9 @@ const Login = () => {
         // Monitor authentication state changes
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (currentUser) {
-                setGoogleUser(currentUser); // Set the user state when authenticated
+         //       setGoogleUser(currentUser); // Set the user state when authenticated
             } else {
-                setGoogleUser(null); // Clear the user state if logged out
+           //     setGoogleUser(null); // Clear the user state if logged out
             }
         });
 
