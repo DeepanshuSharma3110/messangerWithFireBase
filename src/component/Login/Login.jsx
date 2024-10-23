@@ -12,7 +12,7 @@ const Login = () => {
     const [user, setUser] = useState({
         email: '', password: ''
     });
-    const [googleUser, setGoogleUser] = useState(null);
+  //  const [googleUser, setGoogleUser] = useState(null);
 
     useEffect(() => {
         const auth = getAuth(app);
@@ -62,11 +62,11 @@ const Login = () => {
         return true;
     };
 
-    const handleGoogleSignUp = () => {
-        const auth = getAuth(app);
-        const provider = new GoogleAuthProvider();
-        signInWithRedirect(auth, provider);
-    };
+    // const handleGoogleSignUp = () => {
+    //     const auth = getAuth(app);
+    //     const provider = new GoogleAuthProvider();
+    //     signInWithRedirect(auth, provider);
+    // };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -74,7 +74,7 @@ const Login = () => {
             const auth = getAuth(app);
             signInWithEmailAndPassword(auth, user.email, user.password)
                 .then((userCredential) => {
-                    const loggedInUser = userCredential.user;
+                 //   const loggedInUser = userCredential.user;
                     toast.success('Login Successful');
                     navigate('/', 500);
                 })
