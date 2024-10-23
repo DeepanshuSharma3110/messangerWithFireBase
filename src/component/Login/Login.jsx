@@ -3,7 +3,7 @@ import style from './Login.module.css';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect, getRedirectResult, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, getRedirectResult, onAuthStateChanged } from "firebase/auth";
 import useNav from '../Hooks/useNav';
 import app from '../../Middleware/firebase.js';
 
