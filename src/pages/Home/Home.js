@@ -19,7 +19,7 @@ const Home = () => {
                 if (result) {
                     const user = result.user;
                     const credential = GoogleAuthProvider.credentialFromResult(result);
-                    const token = credential.accessToken;
+            
 
                     setUser(user); // Set the user
                     toast.success(`Welcome ${user.displayName}!`);
