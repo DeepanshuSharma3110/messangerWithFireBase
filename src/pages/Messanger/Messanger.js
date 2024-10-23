@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import style from './Messanger.module.css';
 import Contact from '../../component/Contact/Contact';
 import Message from '../../component/Message/Message';
 import InputBar from '../../component/InputBar/InputBar';
 import useNav from '../../component/Hooks/useNav';
-import { FaArrowCircleRight } from "react-icons/fa";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
+
 
 const Messanger = () => {
     const [senderUserId, setSenderUserId] = useState('');
