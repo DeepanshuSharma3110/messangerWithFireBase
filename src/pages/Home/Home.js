@@ -18,7 +18,7 @@ const Home = () => {
             .then((result) => {
                 if (result) {
                     const user = result.user;
-                    const credential = GoogleAuthProvider.credentialFromResult(result);
+                //    const credential = GoogleAuthProvider.credentialFromResult(result);
             
 
                     setUser(user); // Set the user
